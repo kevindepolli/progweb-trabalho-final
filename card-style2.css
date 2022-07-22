@@ -4,15 +4,42 @@
     box-sizing: border-box;
 }
 
-.container-card {
+.container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+
+    max-width: 100%;
+    /* media de 1200 */
+    max-width: 60vw;
+    padding: 0 24px 0 24px;
+
     display: flex;
     flex-wrap: wrap;
-    min-width: 1200px;
+
+    background-color: aqua;
 }
 
 .card {
     background-color: red;
 
     flex: initial;
+    padding: 8px 8px 24px;
+    cursor: pointer;
 
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: rgb(50 48 64 / 33%) 0px 0px 6px 0px;
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        max-width: 1200px;
+    }
 }
