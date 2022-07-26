@@ -6,40 +6,71 @@
 
 .container-cards {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .cards {
+    width: 100%;
+}
 
-    max-width: 100%;
-    /* media de 1200 */
-    max-width: 60vw;
-    padding: 0 24px 0 24px;
+@media (min-width: 1200px) {
+    .cards {
+        width: 1200px;
+    }
+}
 
+.track-list {
     display: flex;
     flex-wrap: wrap;
-
-    background-color: aqua;
 }
+
+
 
 .card {
-    background-color: red;
+    flex: 1 1 0%;
+    height: 439px;
+    padding: 5px;
+    margin: 8px 8px 16px 8px;
 
-    flex: initial;
-    padding: 8px 8px 24px;
-    cursor: pointer;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    transition: all 0.2s ease-in-out 0s;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: rgb(50 48 64 / 33%) 0px 0px 6px 0px;
+.track-list>* {
+    width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
-    .card {
-        max-width: 1200px;
+@media (min-width: 766px) {
+    .track-list>* {
+        width: 50%;
     }
+}
+
+@media screen and (min-width: 992px) {
+    .track-list>* {
+        width: 33%;
+    }
+
+}
+
+
+.card-header {
+    height: 80px;
+    width: 100%;
+
+    background-color: blue;
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    margin: -32px 0;
+    background-color: blueviolet;
+    border-radius: 20%;
+    display: flex;
+    border: 5px solid rgb(255, 255, 255);
+
 }
