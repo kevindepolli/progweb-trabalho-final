@@ -7,6 +7,8 @@
 .container-cards {
     display: flex;
     justify-content: space-around;
+
+    margin: 12px;
 }
 
 .cards {
@@ -31,12 +33,21 @@
     height: 439px;
     padding: 5px;
     margin: 8px 8px 16px 8px;
+    border-radius: 5px;
 
     background-color: aqua;
     display: flex;
     align-items: center;
     flex-direction: column;
 
+    transition: all 0.2s ease-in-out 0s;
+
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0.5em rgb(0 0 0 / 71%);
 }
 
 .track-list>* {
@@ -58,7 +69,7 @@
 
 
 .card-header {
-    height: 80px;
+    height: 120px;
     width: 100%;
 
     background-color: blue;
